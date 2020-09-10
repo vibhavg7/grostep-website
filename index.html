@@ -2,13 +2,8 @@
 <html lang="en">
 
 <head>
-
-	<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
-
 	<script>
-
 		function check() {
-
 			var phoneNumber = document.getElementById('phoneNumber');
 			var message = document.getElementById('message');
 			var goodColor = "#0C6";
@@ -24,15 +19,12 @@
 				message.innerHTML = '';
 			}
 		}
-
 		const subscribeUser = async () => {
 			var inputVal = document.getElementById("phoneNumber").value;
 			const myBody = {};
 			myBody["subscription"] = inputVal;
-
 			var badColor = "#f44336";
 			if (phoneNumber.value.length != 10 || phoneNumber.value.match(/[a-z]/i)) {
-
 				document.getElementById('phoneNumber').style.border = "1px solid red";
 				message.style.color = badColor;
 				message.innerHTML = "Please enter valid phone number."
@@ -48,42 +40,26 @@
 					body: JSON.stringify({ subscription: inputVal })
 				});
 				const content = await response.json();
-				// console.log(content);
 				if (content.status === 200) {
 					alert('Thank you so much for subscribing grostep. Our Team will contact you shortly.');
-					// if (content.subscriptionData[0].user_inserted_id != 0) {
-					// 	alert('Thank you so much for subscribing grostep. Our Team will contact you shortly.');
-					// } 
-					// else {
-					// 	alert('You are already subscribed. Our Team will contact you shortly');
-					// }
 					document.getElementById("phoneNumber").value = '';
 					document.getElementById("phoneNumber").focus();
 				} else {
 					alert('You are not subscribed.Please try again later');
 				}
 			}
-
 		}
-
-		// window.onload = function () {
-		// 	document.getElementById("phoneNumber").focus();
-		// };
 
 
 	</script>
 	<!-- SITE TITTLE -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1">  -->
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=0.86, minimum-scale=0.86"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=1.0, minimum-scale=0.86">
-
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
-	<!-- <meta name="viewport" content="width=1280, initial-scale=1"> -->
-	<title>Grostep India</title>
-
+	<title>Grostep India | Grocery home delivery from your nearby stores  | Grocery Essentials | Daily Essentials | Shopping | COVID Essentials | Food And Ration | Kirana delivery</title>
+	<meta name="description" content="Grostep is a daily grocery requirement app where you can order your daily essentials from nearby grocery store and we will deliver it to your doorstep at your convenient time.">
+	<meta name="keywords" content="grocery home delivery in agra, daily essentials, food delivery, medicines delivery, restaurants, doorstep delivery, grocery essentials, kirana store in agra, covid essentials, grocery store in agra,grocery online, grocery delivery, grocery app in agra, grocery app names, grocery chain, grocery company, grocery delivery in agra, grostep.com, ">
+	<meta name="author" content="Grostep is a daily grocery requirement app where you can order your daily essentials from nearby grocery store and we will deliver it to your doorstep at your convenient time.">
 	<!-- PLUGINS CSS STYLE -->
 	<!-- Bootstrap -->
 	<link href="plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
